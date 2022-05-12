@@ -19,9 +19,21 @@ public class PlayerControles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position = LeftSquare.transform.position;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position = RightSquare.transform.position;
+        }
+        else if(Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position = UpSquare.transform.position;
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position = BottomSquare.transform.position;
         }
         else
         {
