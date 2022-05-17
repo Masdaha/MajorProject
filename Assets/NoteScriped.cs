@@ -13,7 +13,7 @@ public class NoteScriped : MonoBehaviour
         none
     }
 
-    public float speed = 100f;
+    public float speed = 2f;
 
     public NoteDirection direction;
 
