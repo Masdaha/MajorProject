@@ -4,33 +4,42 @@ using UnityEngine;
 
 public class NoteScriped : MonoBehaviour
 {
-    public string direction = "up";
-   
-    // Start is called before the first frame update
-    void Start()
+    public enum NoteDirection
     {
-        
+        up,
+        down,
+        left,
+        right,
+        none
     }
+
+    public float speed = 2f;
+
+    public NoteDirection direction;
+
 
     // Update is called once per frame
     void Update()
     {
-        if (direction == "down")
+        if (direction == NoteDirection.down)
         {
-            transform.Translate(Vector2.down * Time.deltaTime);
+            transform.Translate(Vector2.down * Time.deltaTime * speed);
         }
-        else if (direction == "left")
+        else if (direction == NoteDirection.left)
         {
-            transform.Translate(Vector2.left * Time.deltaTime);
+            transform.Translate(Vector2.left * Time.deltaTime * speed);
         }
-        else if (direction== "right")
+        else if (direction== NoteDirection.right)
         {
-            transform.Translate(Vector2.right * Time.deltaTime);
+            transform.Translate(Vector2.right * Time.deltaTime * speed);
         }
-        else if (direction == "up")
+        else if (direction == NoteDirection.up)
         {
-            transform.Translate(Vector2.up * Time.deltaTime);
+            transform.Translate(Vector2.up * Time.deltaTime * speed);
         }
+
+
+
 
     }
 }
