@@ -22,22 +22,30 @@ public class PlayerControles : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position = LeftSquare.transform.position;
+            LeftSquare.GetComponent<BoxCollider2D>().enabled = false;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position = RightSquare.transform.position;
+            RightSquare.GetComponent<BoxCollider2D>().enabled = false;
         }
         else if(Input.GetKey(KeyCode.UpArrow))
         {
             transform.position = UpSquare.transform.position;
+            UpSquare.GetComponent<BoxCollider2D>().enabled = false;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.position = BottomSquare.transform.position;
+            BottomSquare.GetComponent<BoxCollider2D>().enabled = false;
         }
         else
         {
             transform.position = CenterSquare.transform.position;
+            UpSquare.GetComponent<BoxCollider2D>().enabled = true;
+            BottomSquare.GetComponent <BoxCollider2D>().enabled = true;
+            LeftSquare.GetComponent <BoxCollider2D>().enabled = true;
+            RightSquare.GetComponent <BoxCollider2D>().enabled = true;
         }
     }
 }

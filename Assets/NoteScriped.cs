@@ -37,9 +37,19 @@ public class NoteScriped : MonoBehaviour
         {
             transform.Translate(Vector2.up * Time.deltaTime * speed);
         }
+    }
 
-
-
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            print("Hit Player");
+            Destroy(gameObject);
+        }
+        else if (collision.CompareTag("HitBox"))
+        {
+            print("Hit Box");
+            Destroy(gameObject);
+        }
     }
 }
