@@ -28,14 +28,17 @@ public class NoteScriped : MonoBehaviour
         else if (direction == NoteDirection.left)
         {
             transform.Translate(Vector2.left * Time.deltaTime * speed);
+
         }
         else if (direction== NoteDirection.right)
         {
             transform.Translate(Vector2.right * Time.deltaTime * speed);
+
         }
         else if (direction == NoteDirection.up)
         {
             transform.Translate(Vector2.up * Time.deltaTime * speed);
+
         }
     }
 
