@@ -14,9 +14,13 @@ public class NoteScriped : MonoBehaviour
     }
 
     public float speed = 2f;
-
+    public PlayerControles player;
     public NoteDirection direction;
-
+    private void Start()
+    {
+        // finds the unity player and puts it in globally
+        player = GameObject.Find("Player").GetComponent<PlayerControles>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -41,18 +45,29 @@ public class NoteScriped : MonoBehaviour
 
         }
     }
-
+    //note scriped collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            print("Hit Player");
+            // Get access to player controller
+           
+            player.noteStreak += 1;
+            // Increase score
+            player.Score += player.ScoringSystem();
+
+
+            // Finally, destroy note
             Destroy(gameObject);
-        }
+        }// destroys the note
         else if (collision.CompareTag("HitBox"))
         {
-            print("Hit Box");
+            // Finally, destroy note
+
             Destroy(gameObject);
+            player.noteStreak =0;
         }
     }
+
+    
 }

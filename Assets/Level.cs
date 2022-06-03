@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-
+    public GameObject Player;
+    
     public List<NoteScriped.NoteDirection> directions = new List<NoteScriped.NoteDirection>();
     public float tempo = 120f;
     public GameObject note;
@@ -33,6 +34,9 @@ public class Level : MonoBehaviour
             directions.RemoveAt(0);
             yield return new WaitForSeconds(60f / tempo);
         }       
+
+        
+
     }
 
 }
