@@ -55,7 +55,7 @@ public class NoteScriped : MonoBehaviour
             player.noteStreak += 1;
             // Increase score
             player.Score += player.ScoringSystem();
-
+            print("Player");
 
             // Finally, destroy note
             Destroy(gameObject);
@@ -66,6 +66,7 @@ public class NoteScriped : MonoBehaviour
 
             Destroy(gameObject);
             player.noteStreak =0;
+            print("HitBox");
         }
     }
 

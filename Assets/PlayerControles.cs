@@ -58,7 +58,7 @@ public class PlayerControles : MonoBehaviour
 
         } ScoreText.text = Score.ToString();
     }
-
+    // this is the scoring system, you earn a multiplyer baced on the 
     public int ScoringSystem()
     {
         if (noteStreak == 0)
