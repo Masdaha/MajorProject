@@ -18,7 +18,7 @@ public class NoteScriped : MonoBehaviour
     public NoteDirection direction;
     private void Start()
     {
-        // finds the unity player and puts it in globally
+        // finds the unity player and puts it into a global shearch
         player = GameObject.Find("Player").GetComponent<PlayerControles>();
     }
 
