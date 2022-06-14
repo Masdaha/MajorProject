@@ -58,13 +58,13 @@ public class PlayerControles : MonoBehaviour
 
         } ScoreText.text = Score.ToString();
     }
-<<<<<<< Updated upstream
+<
     // this is the scoring system, you earn a multiplyer baced on the 
-=======
+
     
     //sore multiplier and notes streak(note streak = the amount of notes hit in a row. 
     //this triggers the multiply function and converts it to a string to be able to be displaysed).
->>>>>>> Stashed changes
+
     public int ScoringSystem()
     {
         if (noteStreak == 0)
